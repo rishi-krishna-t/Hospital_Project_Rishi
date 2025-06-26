@@ -1,11 +1,13 @@
 # CMS Hospital Data Downloader
-## Features
 
-- Downloads only "Hospital" datasets in CSV format.
-- Converts all column names in CSV headers to snake_case.
-- Processes multiple datasets in parallel using threads.
-- Tracks last run metadata to avoid re-downloading unchanged files.
-- Cross-platform: works on Windows and Linux.
+## Problem Statement (Summary):
+
+Downloads all CMS datasets related to the theme "Hospitals".
+Only processes CSV files whose titles contain "Hospital".
+Converts all CSV column headers to snake_case.
+Downloads and processes files in parallel.
+Only downloads files that have changed since the last run (tracks metadata).
+Saves processed files locally and maintains a metadata file.
 
 ## Requirements
 - Python 3.7+
